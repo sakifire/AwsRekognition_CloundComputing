@@ -1,41 +1,57 @@
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Amazon Rekognition - Face Mach Demo</title>
-		<link rel="icon" href="img/noun_Face Recognition_1545282.png" type="image/x-icon" />
-		<link rel="stylesheet" href="main.css">
+		<link
+			rel="icon"
+			href="img/noun_Face Recognition_1545282.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body>
 		<div class="tieude">
-			<img class="icon" src="img/noun_Face Recognition_1545282.svg"/>
+			<img class="icon" src="img/noun_Face Recognition_1545282.svg" />
 			<h1>Amazon Rekognition - Face Mach Demo</h1>
 		</div>
 		<div class="body1">
 			<h2>Upload Image and click on Submit to Match</h2>
-			<form action="/api/recognize" class=" file1 temp" method="post" enctype="multipart/form-data">
-				<img class="avt"  id="photo" src="img/download.jpg">
+			<form
+				action="/api/recognize"
+				class="file1 temp"
+				method="post"
+				enctype="multipart/form-data"
+			>
+				<img class="avt" id="photo" src="img/download.jpg" />
 				<div class="Btnclick">
-					<input type="file" accept="image/*;capture=camera" name="img" id="file">
+					<input
+						type="file"
+						accept="image/*;capture=camera"
+						name="img"
+						id="file"
+					/>
 				</div>
-				<input type="submit">
+				<input type="submit" />
 			</form>
-			<br>
-			<br>
+			<br />
+			<br />
 			<h2>Create Collection (Update config for collection name)</h2>
-	
-			<form action="/api/createcollection" method="get" enctype="multipart/form-data">
-	
-				<input type="submit">
+
+			<form
+				action="/api/createcollection"
+				method="get"
+				enctype="multipart/form-data"
+			>
+				<input type="submit" />
 			</form>
-			<br>
-			<br>
-			<h2>Add Faces to Collection (From Faces folder) </h2>
-	
+			<br />
+			<br />
+			<h2>Add Faces to Collection (From Faces folder)</h2>
+
 			<form action="/api/indexfaces" method="get" enctype="multipart/form-data">
-	
-				<input type="submit">
+				<input type="submit" />
 			</form>
 		</div>
 		<script src="main.js"></script>

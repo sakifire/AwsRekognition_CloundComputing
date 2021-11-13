@@ -1,28 +1,26 @@
-*{
-    
-    padding: 0; margin: 0;
-    background-color: greenyellow;
-    
+* {
+	padding: 0;
+	margin: 0;
+	background-color: greenyellow;
 }
 body {
-    background-image: url("img/as.jpg");
+	background-image: url('img/as.jpg');
 }
-.tieude{
-    padding-top: 5%;
-    text-align: center;
+.tieude {
+	padding-top: 5%;
+	text-align: center;
 }
-.body1{
-    text-align: center;
-    margin: auto;
+.body1 {
+	text-align: center;
+	margin: auto;
 }
-.icon{
-    width: 80px;
+.icon {
+	width: 80px;
 }
-.Btnclick{
-    margin: auto;
-    
+.Btnclick {
+	margin: auto;
 }
-.avt{
-    width: 200px;
-    height: 250px;
+.avt {
+	width: 200px;
+	height: 250px;
 }
