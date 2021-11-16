@@ -1,59 +1,113 @@
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Amazon Rekognition - Face Mach Demo</title>
-		<link
-			rel="icon"
-			href="img/noun_Face Recognition_1545282.png"
-			type="image/x-icon"
-		/>
-		<link rel="stylesheet" href="main.css" />
-	</head>
-	<body>
-		<div class="tieude">
-			<img class="icon" src="img/noun_Face Recognition_1545282.svg" />
-			<h1>Amazon Rekognition - Face Mach Demo</h1>
-		</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Amazon Rekognition - Face Mach Demo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/grid.css">
+	<link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="app">
+		<!-- header -->
+		<header class="header">
+			<div class="grid wide">
+				<!-- header navbar -->
+				<nav class="header__navbar hide-on-mobile-tablet">
+					<!-- header navbar left -->
+					<ul class="header__navbar-list">
+						<li class="
+									header__navbar-item 
+									header__navbar-item--strong
+									header__navbar-item--separate">
+							Về Chúng Tôi</li>
+						<li class="
+									header__navbar-item
+									header__navbar-item--strong
+									header__navbar-item--has-qr
+									header__navbar-item--separate
+								">
+							Tải ứng dụng
+							<div class="header__qr ">
+								<img src="assets/img/qrcode.png" alt="QR code" class="header__qr-img">
+								<div class="header__qr-apps">
+									<a href="" class="header__qr-link">
+										<img src="assets/img/ch_play.png" alt="CH Play" class="header__qr-download-img">
+									</a>
+									<a href="" class="header__qr-link">
+										<img src="assets/img/apstore.png" alt="Apstore" class="header__qr-download-img">
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="header__navbar-item header__navbar-item--strong">
+							<span class="header__navbar-item-no-pointer">Kết nối</span>
+							<a href="#" class="header__navbar-icon-link">
+								<i class="header__navbar-icon fab fa-facebook"></i>
+							</a>
+							<a href="#" class="header__navbar-icon-link">
+								<i class="header__navbar-icon fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+					<!--rnd header navbar left -->
+				</nav>
+			</div>
+
+			<div class="tieude">
+				<h1>Amazon Rekognition - Face Mach Demo</h1>
+			</div>
+		</header>
+
+		<!-- Tiêu đề -->
 		<div class="body1">
 			<h2>Upload Image and click on Submit to Match</h2>
-			<form
-				action="/api/recognize"
-				class="file1 temp"
-				method="post"
-				enctype="multipart/form-data"
-			>
-				<img class="avt" id="photo" src="img/download.jpg" />
-				<div class="Btnclick">
-					<input
-						type="file"
-						accept="image/*;capture=camera"
-						name="img"
-						id="file"
-					/>
+			<form action="/api/recognize" class="file1 temp" method="post" enctype="multipart/form-data">
+				<div class="image-upload">
+					<label for="file">
+						<i class="fas fa-user"></i>
+					</label>
+					<input id="file" type="file" accept="img/*;capture=camera" name="img"
+						onchange="getImage(this.value);" />
 				</div>
-				<input type="submit" />
+				<input class=" btn-grad" type="submit" />
 			</form>
+
 			<br />
 			<br />
 			<h2>Create Collection (Update config for collection name)</h2>
 
-			<form
-				action="/api/createcollection"
-				method="get"
-				enctype="multipart/form-data"
-			>
-				<input type="submit" />
+			<form action="/api/createcollection" method="get" enctype="multipart/form-data">
+				<input class="btn-grad" type="submit" />
 			</form>
 			<br />
 			<br />
 			<h2>Add Faces to Collection (From Faces folder)</h2>
 
 			<form action="/api/indexfaces" method="get" enctype="multipart/form-data">
-				<input type="submit" />
+				<input class="btn-grad" type="submit" />
 			</form>
 		</div>
-		<script src="main.js"></script>
-	</body>
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer__bottom">
+				<div class="grid wide">
+					<p class="footer__text">@2021 - Bản quyền thuộc về Nhóm 21</p>
+				</div>
+			</div>
+		</footer>
+		<!--end footer -->
+
+		<!-- Script -->
+		<script src="assets/js/main.js"></script>
+</body>
+
 </html>
