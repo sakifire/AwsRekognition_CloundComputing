@@ -69,14 +69,11 @@
 		<!-- Tiêu đề -->
 		<div class="body1">
 			<h2>Upload Image and click on Submit to Match</h2>
-			<form action="/api/recognize" class="file1 temp" method="post" enctype="multipart/form-data">
-				<div class="image-upload">
-					<label for="file">
-						<i class="fas fa-user"></i>
-					</label>
-					<input id="file" type="file" accept="img/*;capture=camera" name="img"
-						onchange="getImage(this.value);" />
-				</div>
+			<form action="/api/recognize" method="post" enctype="multipart/form-data">
+				<button >
+					<input id="image" type="file" accept="img/*;capture=camera" name="image"
+						onchange="getImage(this.value);" />Upload Image
+				</button>
 				<input class=" btn-grad" type="submit" />
 			</form>
 
