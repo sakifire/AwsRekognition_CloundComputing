@@ -2,7 +2,7 @@
   "FaceRecords": [
     {
       "Face": {
-        "FaceId": "40a0689d-1d1e-4bcd-842e-748eb599b97d",
+        "FaceId": "d2334334-d824-47e8-8d16-33d9334c04a3",
         "BoundingBox": {
           "Width": 0.19966134428977966,
           "Height": 0.2644922435283661,
@@ -256,7 +256,7 @@
     },
     {
       "Face": {
-        "FaceId": "8836a43c-0160-489b-a884-595ce5599ae3",
+        "FaceId": "f3b81541-eb1f-4806-85ac-01b483f543d9",
         "BoundingBox": {
           "Width": 0.0411924347281456,
           "Height": 0.04674258083105087,
@@ -510,7 +510,7 @@
     },
     {
       "Face": {
-        "FaceId": "6bd567f8-80dc-4b65-a05e-b2ce5624b1e7",
+        "FaceId": "1c01e79e-2965-4080-9183-8534cb2ffdf5",
         "BoundingBox": {
           "Width": 0.0313718318939209,
           "Height": 0.0336030013859272,

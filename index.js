@@ -8,12 +8,16 @@ var upload = multer({ dest: 'uploads/' });
 
 var AWS = require('aws-sdk');
 AWS.config.region = config.region;
-
+//AWS access detail
+// AWS.config.update({ 
+// 	accessKeyId: 'ASIAWLDHXFJ3NV5PFGOX',
+// 	secretAccessKey: 'czY5D12rUYArkuqvB1ROLjcbC9/StK2pdyLnktIX',
+// 	region: config.region
+// })
 var uuid = require('node-uuid');
 var fs = require('fs-extra');
 var path = require('path');
 const { RSA_NO_PADDING } = require('constants');
-
 
 
 //HTML
@@ -23,7 +27,9 @@ app.use(express.static('public'));
 var rekognition = new AWS.Rekognition({region: config.region});
 
 
+
 //Post file for face Match
+//Đây là api để chọn ảnh cần so sánh
 app.post('/api/recognize', upload.single("image"), function (req, res, next) {
 	var bitmap = fs.readFileSync(req.file.path);
 
@@ -51,14 +57,16 @@ app.post('/api/recognize', upload.single("image"), function (req, res, next) {
 
 
 //API for adding faces in collection. Source folder : faces (hard coded)
+//đây là api cho phần đưa ảnh lên collection
 app.get('/api/indexfaces', function (req, res) {
-	indexFaces();
+	indexFaces();//hàm đưa ảnh vào collection
 	res.send("All faces added");
   })
 
 //API for creating collection
+//đây là API dùng để tạo collection
   app.get('/api/createcollection', function (req, res) {
-	createCollection();
+	createCollection();//Hàm tạo collection
 	res.send("Collection Created");
   })
 
@@ -94,7 +102,7 @@ app.get('/api/indexfaces', function (req, res) {
 	});
 }
 
-
+//Đây là hàm tạo collection
 function createCollection() {
 	rekognition.createCollection( { "CollectionId": config.collectionName }, function(err, data) {
 	  if (err) {
